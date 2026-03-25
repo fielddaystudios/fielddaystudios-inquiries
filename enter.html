@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Day Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: #1e3a2f;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: #f5f0e8;
+      border-radius: 6px;
+      padding: 56px 48px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 8px;
+    }
+
+    .logo span { color: #4a7c59; }
+
+    .tagline {
+      font-size: 0.82rem;
+      color: #b5815a;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #1e3a2f;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 14px 16px;
+      background: #ede5d4;
+      border: 1.5px solid #c8dcc0;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #2c2c28;
+      outline: none;
+      transition: border-color 0.3s ease;
+      margin-bottom: 16px;
+      -webkit-appearance: none;
+    }
+
+    input[type="password"]:focus {
+      border-color: #4a7c59;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      background: #1e3a2f;
+      color: #f5f0e8;
+      border: none;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover { background: #2d5a3d; }
+
+    .error {
+      display: none;
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #b5815a;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="logo">Field Day <span>Studios</span></p>
+    <p class="tagline">Coming soon</p>
+    <label for="password">Enter password to continue</label>
+    <input type="password" id="password" placeholder="••••••••••" autofocus />
+    <button onclick="checkPassword()">Enter</button>
+    <p class="error" id="error">Incorrect password. Try again.</p>
+  </div>
+
+  <script>
+    // Check if already authenticated
+    if (sessionStorage.getItem('fds_auth') === 'true') {
+      window.location.href = 'index.html';
+    }
+
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      if (input === 'doodle2026!') {
+        sessionStorage.setItem('fds_auth', 'true');
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('password').value = '';
+        document.getElementById('password').focus();
+      }
+    }
+
+    document.getElementById('password').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') checkPassword();
+    });
+  </script>
+</body>
+</html>
