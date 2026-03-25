@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Field Day Studios</title>
+  <meta name="description" content="Get in touch with Eli Harvey at Field Day Studios." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Field Day <span>Studios</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-eyebrow">Contact</p>
+        <h1>Let's start a conversation.</h1>
+        <p>No lengthy intake forms, no automated sales sequences. Fill out the form below and I'll be in touch personally within one business day.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section container">
+      <div class="contact-layout">
+
+        <!-- LEFT: INFO -->
+        <div class="reveal">
+          <h2 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--forest); line-height: 1.2; margin-bottom: 20px;">Good conversations start here.</h2>
+          <p style="font-size: 1rem; color: var(--bark); line-height: 1.75; margin-bottom: 40px;">Whether you have a specific project in mind or just want to think out loud about a challenge you're facing, I'm glad to talk. The first conversation is always free, always informal, and always honest.</p>
+
+          <div class="contact-detail">
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <span>eli@fielddaystudios.com</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <span>Chicago, IL — available remotely nationwide</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">⏱</div>
+              <span>Response within one business day</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 48px; padding: 28px; background: var(--parchment); border-radius: 4px; border-left: 3px solid var(--fern);">
+            <p style="font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--forest); line-height: 1.6;">"[A short, warm sentence about how you approach new conversations — something that makes a potential client feel at ease before they hit send.]"</p>
+            <p style="font-size: 0.82rem; color: var(--bark); margin-top: 12px;">— Eli Harvey</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: FORM -->
+        <div class="reveal">
+          <div class="form-card">
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your name</label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+                </div>
+                <div class="form-group">
+                  <label for="company">Company</label>
+                  <input type="text" id="company" name="company" placeholder="Acme Co." />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="jane@acmeco.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="source">How did you hear about me?</label>
+                <select id="source" name="source" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="We've worked together before">We've worked together before</option>
+                  <option value="Referral / word of mouth">Referral / word of mouth</option>
+                  <option value="LinkedIn, Google, or other">LinkedIn, Google, or other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">What's on your mind?</label>
+                <textarea id="message" name="message" placeholder="Tell me a bit about what you're working on or what challenge you're facing. There's no wrong answer here." required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit" id="submitBtn">Send message</button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+              <div style="font-size: 2rem; margin-bottom: 16px;">🌿</div>
+              <h3>Message received!</h3>
+              <p>Thanks for reaching out. You should have a confirmation in your inbox — I'll be in touch personally within one business day.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Field Day Studios</h3>
+        <p>A consulting practice helping organizations move from complexity to clarity — and from planning to momentum.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:eli@fielddaystudios.com">eli@fielddaystudios.com</a></li>
+          <li><a href="https://linkedin.com/in/eliharvey" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Field Day Studios. All rights reserved.</p>
+      <p>Chicago, IL</p>
+    </div>
+  </footer>
+
+  <script>
+    const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const data = {
+        name:    document.getElementById('name').value,
+        company: document.getElementById('company').value,
+        email:   document.getElementById('email').value,
+        source:  document.getElementById('source').value,
+        message: document.getElementById('message').value
+      };
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+
+      } catch (err) {
+        btn.textContent = 'Something went wrong — please email me directly.';
+        btn.disabled = false;
+      }
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
