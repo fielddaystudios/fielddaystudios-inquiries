@@ -184,5 +184,10 @@
   </script>
 
   <script src="js/main.js"></script>
+  <script>
+  if (sessionStorage.getItem('fds_auth') !== 'true') {
+    window.location.href = '/fieldday-studios/enter.html';
+  }
+</script>
 </body>
 </html>
